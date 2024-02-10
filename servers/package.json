@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {
+   "start": "node --loader ts-node/esm serverlist.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "ts-node": "^10.9.2"
+  }
+}
