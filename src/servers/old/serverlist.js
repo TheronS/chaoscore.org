@@ -1,10 +1,10 @@
 // Import necessary modules
 import express from 'express';
 const app = express();
-import huffmanQuery from './huffman.js' // Adjust the path accordingly
+import huffmanQuery from '../huffman.js' // Adjust the path accordingly
 
 // Endpoint to handle the query
-app.get('/api/serverlist', (req, res) => {
+app.get('/serverlist', (req, res) => {
   // Your Huffman query logic goes here
   const queryResult = huffmanQuery.performQuery(); // Adjust this based on your logic
 
