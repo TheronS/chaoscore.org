@@ -10,9 +10,9 @@ import {
   MessageComponentTypes,
   ButtonStyleTypes,
 } from 'discord-interactions';
-import { VerifyDiscordRequest, getRandomEmoji, DiscordRequest } from './utils.js';
+import { VerifyDiscordRequest, getRandomEmoji, DiscordRequest } from '../../discord/utils.js';
 import { WebhookClient } from 'discord.js';
-import { sendMessage, decimalToHex } from './sendmessage.js';
+import { sendMessage, decimalToHex } from '../../discord/sendmessage.js';
 
 const webhookClient = new WebhookClient({
   url: 'https://discord.com/api/webhooks/1205175093244985345/SOVYCcXtSorjZ4emYdG273bWtlyuqreImn0RfTirBC7duYiG-NmqpeD6MtxZyyvBQb7A',

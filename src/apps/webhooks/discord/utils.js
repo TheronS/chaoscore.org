@@ -29,7 +29,6 @@ export async function DiscordRequest(endpoint, options) {
       'Content-Type': 'application/json; charset=UTF-8',
       'User-Agent': 'PalK1ng',
     },
-    ...options
   });
   // throw API errors
   if (!res.ok) {
