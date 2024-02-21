@@ -5,7 +5,7 @@ const ServerList = () => {
 
   useEffect(() => {
     // Fetch data from your backend
-    fetch('/api/serverlist')
+    fetch('/servers/serverlist')
       .then(response => response.json())
       .then(data => {
         // Update the state with the fetched data

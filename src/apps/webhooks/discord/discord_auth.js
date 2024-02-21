@@ -1,12 +1,10 @@
 import("dotenv");
 import WebSocket from "ws";
-import { time } from "discord.js";
+//import { time } from "discord.js";
 import BodyReadable from "undici/types/readable";
-const { json } = require("body-parser");
-const { time, Console, error } = require("console");
-const { REST } = require("discord.js");
-const { TokenClass } = require("typescript");
-const WebSocket = require("ws");
+import { json }from "body-parser";
+import { REST } from  "discord.js";
+import { TokenClass } from "typescript";
 import { reconnect_Error_Handler } from './discordErrorHandler.js';
 import { TIMEOUT } from "dns";
 import { code, empty } from "statuses";
@@ -23,7 +21,12 @@ export function initSocketConn() {
     const webS = new WebSocket;
     webS.CONNECTING('wss://gateway.discord.gg/?v=10&encoding=json'); {
         console.log("Connecting to Discord Gateway");
-        let socketResponse = webS_recieve_json_response(webS);
+        //let socketResponse = webS_recieve_json_response(webS);
+
+        //try (webS_recieve_json_response(webS))
+
+       // }
+
         while (socketResponse == null && RECONNECTION_ATTEMPTS < RECONNECTION_MAX_ATTEMPTS) {
         for (i = 0; i <= CONNECTION_WAIT_TIME; i++) {
             console.log("Attempting response... " + i + " of " + RECONNECTION_MAX_ATTEMPTS);
@@ -60,10 +63,10 @@ webS.on('open', function open() {
     ws.send(JSON.stringify(payload));
 });
 
-webS.close() {
-    console.log('Disconnected');
-    reconnect_Handler();
-});
+// webS.close() {
+//     console.log('Disconnected');
+//     reconnect_Handler();
+// };
 
 webS.on('message', function incoming(data) {
     let payload = JSON.parse(data)
@@ -133,6 +136,3 @@ function payload_UP_Presence() {
     //not using yet, if i ever do i'll know.
     console.log("update presences");
 }
-
-TkxNzQyMTE3MTg0Mjc0NDMy.GSnBMO.Yzw9djzPjQe9Xo6BKIdNw5OpvdL8eIAXYU3ejQ token
-//1205112858241794098chanid
